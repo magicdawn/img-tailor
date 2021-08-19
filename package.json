@@ -1,0 +1,40 @@
+{
+  "name": "img-tailor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "nyc --reporter=lcov --reporter=text mocha",
+    "report-cover": "codecov",
+    "dev": "tsc -w --incremental",
+    "build": "rm -rf lib; tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@magicdawn/eslint-config": "latest",
+    "@magicdawn/prettier-config": "latest",
+    "codecov": "^3.3.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0",
+    "should": "^13.2.3",
+    "eslint": "^6.8.0",
+    "prettier": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "typescript": "^4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,less,vue}": [
+      "prettier --write"
+    ]
+  }
+}
