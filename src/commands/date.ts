@@ -6,7 +6,7 @@ import moment from 'moment'
 import fs from 'fs-extra'
 import mozjpeg from 'node-mozjpeg'
 import MeasureTimer from '../Timer.js'
-// import {globby} from 'globby'
+import {globby} from 'globby'
 import pmap from 'promise.map'
 import path from 'path'
 import {cpus} from 'os'
@@ -21,8 +21,7 @@ export class DateCommand extends Command {
   files = Option.String({required: true})
 
   async execute() {
-    const {globby} = await import('globby')
-
+    // const {globby} = await import('globby')
     const files = this.files
     const fileList = await globby(files, {cwd: process.cwd()})
     await pmap(

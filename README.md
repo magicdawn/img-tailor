@@ -1,6 +1,6 @@
 # img-tailor
 
-> 
+> ✂️ 操作图片的小裁缝
 
 [![Build Status](https://img.shields.io/travis/magicdawn/img-tailor.svg?style=flat-square)](https://travis-ci.org/magicdawn/img-tailor)
 [![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/img-tailor.svg?style=flat-square)](https://codecov.io/gh/magicdawn/img-tailor)
@@ -11,14 +11,22 @@
 ## Install
 
 ```sh
-$ npm i img-tailor --save
+$ cnpm i img-tailor -g
 ```
 
-## API
+## commands
 
-```js
-const imgTailor = require('img-tailor');
+> 读取 exif 拍摄日期, 并添加到图片的右下角, 支持批量操作
+
+```sh
+# 使用 glob 需要单引号, 避免 glob 被 shell 处理
+$ img-tailor date '~/Downloads/imgs/*.heic'
 ```
+
+命令会生成 `~/Downloads/imgs/with-date/*.with-date.jpeg`
+
+效果
+![image](https://user-images.githubusercontent.com/4067115/130257138-073c3bee-3824-41ed-bc30-c6dd86abce2b.png)
 
 ## Changelog
 
