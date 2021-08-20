@@ -12,4 +12,5 @@ coverage.*
 test/assets/**.png
 test/assets/**.jpg
 test/assets/**.jpeg
-
+lib
+**/*.tsbuildinfo
