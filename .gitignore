@@ -9,4 +9,7 @@ node_modules
 coverage
 coverage.*
 
-src/*.png
+test/assets/**.png
+test/assets/**.jpg
+test/assets/**.jpeg
+
