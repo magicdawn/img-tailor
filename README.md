@@ -14,6 +14,15 @@
 $ cnpm i img-tailor -g
 ```
 
+### 未发布
+
+- sharp / libvips 兼容性, 考虑 heif / ... 其他 sharp bundle 的 libvips 不支持的格式
+- globby esm module, 降级
+- date command 完善
+  - [ ] 支持 output
+  - [ ] 支持 字体, 颜色, 位置设置
+  - [ ] 支持内容自定义, date format
+
 ## commands
 
 > 读取 exif 拍摄日期, 并添加到图片的右下角, 支持批量操作
