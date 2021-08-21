@@ -18,6 +18,10 @@ export class DateCommand extends Command {
     ['with-date'],
   ]
 
+	static usage = {
+		description: 'add date to images'
+	}
+
   files = Option.String({required: true})
 
   async execute() {

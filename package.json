@@ -35,6 +35,7 @@
     "nyc": "^14.0.0",
     "prettier": "latest",
     "should": "^13.2.3",
+    "type-fest": "^2.0.0",
     "typescript": "^4"
   },
   "husky": {

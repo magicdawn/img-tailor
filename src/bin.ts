@@ -11,15 +11,16 @@ import MeasureTimer from './Timer'
 import debugFactory from 'debug'
 import {Cli, Builtins} from 'clipanion'
 import {DateCommand} from './commands/date.js'
+import {PackageJson} from 'type-fest'
 
 debugFactory.enable('timer:*')
 
+const pkg: PackageJson = require('../package.json')
 const [node, app, ...args] = process.argv
-const pkg = require('../package.json')
 const cli = new Cli({
   binaryLabel: pkg.name,
   binaryName: pkg.name,
-  binaryVersion: `1.0.0`,
+  binaryVersion: pkg.version,
 })
 
 cli.register(DateCommand)
