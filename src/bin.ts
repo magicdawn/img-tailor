@@ -15,9 +15,10 @@ import {DateCommand} from './commands/date.js'
 debugFactory.enable('timer:*')
 
 const [node, app, ...args] = process.argv
+const pkg = require('../package.json')
 const cli = new Cli({
-  binaryLabel: `My Application`,
-  binaryName: `${node} ${app}`,
+  binaryLabel: pkg.name,
+  binaryName: pkg.name,
   binaryVersion: `1.0.0`,
 })
 

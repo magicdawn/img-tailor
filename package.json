@@ -1,9 +1,8 @@
 {
   "name": "img-tailor",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "type": "module",
-  "exports": "./lib/bin.js",
+  "main": "./lib/bin.js",
   "bin": {
     "img-tailor": "./lib/bin.js"
   },
